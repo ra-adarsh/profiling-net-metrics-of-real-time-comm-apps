@@ -13,15 +13,14 @@ This repo contains the script and Python code for recording network metrics of r
 ```
 chmod +x network_monitor.sh
 ```
-- Assign the value of Parent PID to `target_pid` as
-  - If using the script on Zoom
-  ```
-  target_pid=$(pgrep zoom | head -n 1)
-  ```
-  - Since other real time communication applications (Google Meet, Microsoft Teams) do not have apps for Ubuntu, run those applications on Google Chrome. Use Chrome's Task Manager to find the PID of the tab running the application.
-  ```
-  target_pid=<PID from Chrome’s Task Manager>
-  ```
+- Assign the value of Parent PID to `target_pid`. If using the script on Zoom
+```
+target_pid=$(pgrep zoom | head -n 1)
+```
+- Since other real time communication applications (Google Meet, Microsoft Teams) do not have apps for Ubuntu, run those applications on Google Chrome. Use Chrome's Task Manager to find the PID of the tab running the application.
+```
+target_pid=<PID from Chrome’s Task Manager>
+```
 - Run the script with target Parent PID to generate the CSV file containing metrics.
 ```
 ./network_monitor.sh $target_pid
