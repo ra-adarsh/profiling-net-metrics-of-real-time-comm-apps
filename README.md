@@ -25,7 +25,7 @@ target_pid=<PID from Chrome’s Task Manager>
 ```
 ./network_monitor.sh $target_pid
 ```
-- Provide the name of the CSV file generated to pd.read_csv(‘<file_name>’) to load it. Then, run the Python file to generate graphs. It’ll generate plots in a directory with a name in the format plots_YYYYMMDD_HHMMSS.
+- Provide the name of the CSV file generated to `pd.read_csv(‘<file_name>’)` to load it. Then, run the Python file to generate graphs. It’ll generate plots in a directory with a name in the format `plots_YYYYMMDD_HHMMSS`.
 ```
 python3 network_plotting.py
 ```
