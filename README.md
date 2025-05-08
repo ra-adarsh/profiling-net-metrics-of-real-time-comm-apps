@@ -17,9 +17,11 @@ chmod +x network_monitor.sh
 ```
 target_pid=$(pgrep zoom | head -n 1)
 ```
-- Since other real time communication applications (Google Meet, Microsoft Teams) do not have apps for Ubuntu, run those applications on Google Chrome. Use Chrome's Task Manager to find the PID of the tab running the application.
+- Since other real time communication applications (Google Meet, Microsoft Teams) do not have apps for Ubuntu, run those applications on Google Chrome. Use tools like `htop` and `pgrep` to find out Parent PID.
+> [!NOTE]
+> Do use `htop` to confirm that PID is of Google Chrome, as there might be other processes running like chrome_crashpad_handler which have Chrome in their name.)
 ```
-target_pid=<PID from Chrome’s Task Manager>
+target_pid=<PID>
 ```
 - Run the script with target Parent PID to generate the CSV file containing metrics.
 ```
