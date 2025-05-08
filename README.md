@@ -32,3 +32,4 @@ python3 network_plotting.py
 # Limitations:
 - Only supports TCP connections.
 - High CPU usage possible with very frequent polling or high process tree depth.
+- Inability to give metrics which add over time (like total bytes received) due to ephemeral nature of the TCP connections.
